@@ -207,45 +207,7 @@ ${{ secrets.MY_SECRET }}   # Secrets 값
 
 ## 4-10. 실습 — 따라하기
 
-### 실습 1 — Hello World Workflow 생성
 
-GitHub 저장소에서 직접 Workflow 파일 생성.
-
-```
-1. 저장소 → Actions 탭
-2. "New workflow" 또는 "set up a workflow yourself"
-3. 파일명: hello.yml
-```
-
-```yaml
-name: Hello World
-
-on:
-  push:
-    branches: [main]
-
-jobs:
-  greet:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: 인사
-        run: echo "Hello, GitHub Actions!"
-
-      - name: 현재 시간
-        run: date
-
-      - name: 환경 정보
-        run: |
-          echo "OS: $RUNNER_OS"
-          echo "워크스페이스: $GITHUB_WORKSPACE"
-          echo "커밋: $GITHUB_SHA"
-```
-
-```
-4. Commit changes → main 브랜치에 직접 커밋
-5. Actions 탭에서 실행 확인
-6. 각 step 클릭해서 출력 확인
 ```
 
 ---
